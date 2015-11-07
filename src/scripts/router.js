@@ -7,6 +7,8 @@ class Router extends Backbone.Router {
     return {
       '': 'index',
       'registration': 'registration',
+      'about': 'about',
+      'thumbnail': 'thumbnail'
     }
   }
 
@@ -18,9 +20,16 @@ class Router extends Backbone.Router {
     this.current = 'registration';
   }
 
+  about() {
+    this.current = 'about';
+  }
+
+  thumbnail() {
+    this.current = 'thumbnail';
+  }
+
   initialize() {
     Backbone.history.start();
-    console.log("Houston");
   }
 };
 

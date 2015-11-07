@@ -1,1 +1,356 @@
 @import "normalize.css/normalize"
+
+@import url(https://fonts.googleapis.com/css?family=Oxygen|Hind)
+
+body
+  font-family: "Hind"
+  margin: 0
+  background-color: #fff
+
+input
+  border-radius: 4px
+
+//// Splash Page ////
+
+.splash
+  background-image: url("../images/greenbeans.jpeg")
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 900px
+
+.header
+  margin-top: -24px
+  width: 100%
+  height: 55px
+  font-size: 2em
+  .nav
+    margin-right: 20px
+  li
+    display: inline-block
+    float: right
+    padding: 15px
+    list-style: none
+    font-family: "Hind"
+  a:link
+    text-decoration: none
+    color: #fff
+  a:visited
+    text-decoration: none
+    color: #fff
+  a:hover
+    color: #A2381C
+
+.dropdown
+  position: relative
+  &:hover > .drop-nav
+    display: block
+
+.drop-nav
+  font-size: .80em
+  background-color: #bcbcbc
+  border-radius: 4px
+  position: absolute
+  margin-left: -90px
+  display: none
+  li
+    margin-left: -50px
+
+.login
+  display: flex
+  align-self: flex-end
+  border-radius: 4px
+
+.button
+  border-radius: 4px
+  background-color: #fff
+  &:hover
+    background-color: #A2381C
+
+.checkbox
+  margin-left: 20px
+
+#newAccount
+  margin-left: -30px
+  margin-bottom: 20px
+  font-size: 1.1em
+  a:link
+    color: black
+  a:visited
+    color: black
+  a:hover
+    color: #A2381C
+
+.logo
+  font-family: "Hind"
+  color: #fff
+  font-size: 5em
+  text-align: center
+  margin-top: 190px
+  a:link
+    text-decoration: none
+    color: #fff
+  a::before
+    text-decoration: none
+    color: #fff
+  a:visited
+    text-decoration: none
+    color: #fff
+
+#not
+  color: #A2381C
+
+.arrow
+  position: relative
+  margin-top: 250px
+  text-align: center
+
+//// Footer ////
+
+.footer
+  height: 50px
+  width: 100%
+
+//// Thumbnails ////
+
+.thumbnail-container
+  width: 100%
+  height: 425px
+  margin-top: 150px
+  display: flex
+  align-items: center
+  a:link
+    text-decoration: none
+    color: black
+  a::before
+    text-decoration: none
+    color: black
+  a:visited
+    text-decoration: none
+    color: black
+
+.thumbnail
+  border: 2px solid
+  border-radius: 4px
+  height: 440px
+  width: 360px
+  margin: 100px
+  display: flex
+  align-items: center
+  color: #fff
+  a:link
+    text-decoration: none
+  a::before
+    text-decoration: none
+  a:visited
+    text-decoration: none
+
+#thumb-1
+  background-image: url("../images/kitchen.jpeg")
+  background-size: cover
+
+#thumb-2
+  background-image: url("../images/corn.jpeg")
+  background-size: cover
+
+#thumb-3
+  background-image: url("http://www.feedingamerica.org/assets/images/section-landing-page-boxes/section-or-families-mobile-pantry-expjan2016.jpg")
+  background-size: cover
+
+//// Supporters ////
+
+.supporters-title
+  margin-top: 100px
+  margin-bottom: -100px
+  text-align: center
+
+.supporters
+  height: 500px
+  width: 100px
+  margin-top: 150px
+  display: inline-flex
+  margin-left: 500px
+  margin-right: 40px
+
+#TIY
+  margin-right: 80px
+
+#SPACC
+  margin-right: 80px
+
+//// Registration Navigation ///
+
+.registrationHeader
+  margin-top: -24px
+  width: 100%
+  height: 55px
+  font-size: 2em
+  border-bottom: 2px solid
+  .RegistrationNav
+    margin-right: 20px
+  li
+    display: inline-block
+    float: right
+    padding: 15px
+    list-style: none
+    font-family: "Hind"
+  a:link
+    text-decoration: none
+    color: black
+  a:visited
+    text-decoration: none
+    color: black
+  a:hover
+    color: #A2381C
+
+//// User Setup ////
+
+.step-1
+  height: 450px
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  .form-fields-1
+    margin-top: -20px
+    padding: 20px
+    font-size: 1.5em
+    align-content: center
+  h1
+    display: flex
+    font-size: 2.5em
+  li
+    list-style: none
+  input
+    border-radius: 4px
+    margin: 10px
+
+#email
+  margin-left: 50px
+
+#password
+  margin-left: 22px
+
+#setUpButton
+  border-radius: 4px
+  background-color: #fff
+  margin-top: 20px
+  margin-left: 100px
+  &:hover
+    background-color: #A2381C
+
+.image
+  display: block
+  float: right
+  margin-top: 50px
+
+.setupImage
+  height: 600px
+  width: 100%
+  background-image: url("../images/bananas.jpeg")
+
+//// Survey Fields ////
+
+.step-2
+  height: 450px
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  h1
+    display: flex
+    font-size: 2.5em
+  .form-fields-2
+    margin-top: -20px
+    padding: 20px
+    font-size: 1.5em
+    align-content: center
+    li
+      list-style: none
+      display: flex
+
+#surveyButton-1
+  border-radius: 4px
+  width: 75px
+  height: 40px
+  background-color: #fff
+  &:hover
+    background-color: #B23210
+
+#surveyButton-2
+  border-radius: 4px
+  width: 200px
+  height: 40px
+  margin-left: 20px
+  background-color: #fff
+  &:hover
+    background-color: #B23210
+
+.drop-form
+  margin-left: -50px
+  margin-top: -20px
+  font-size: 1em
+  h3
+    margin-left: auto
+    margin-top: -30px
+  label
+    margin-left: auto
+
+.role-info
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  input
+    height: 25px
+    margin-bottom: 10px
+    margin-top: 10px
+
+#avail-title
+  margin-left: -30px
+
+.availability
+  display: inline-flex
+  p
+    font-size: .75em
+    margin-right: 10px
+    margin-top: -1px
+
+.surveyFieldImage
+  height: 600px
+  width: 100%
+  background-image: url("../images/carrots.jpeg")
+  background-size: cover
+
+#vol-name
+  margin-left: 138px
+
+#vol-phone
+  margin-left: 88px
+
+#from
+  margin-left: 20px
+
+#to
+
+
+//// About ////
+
+.aboutContainer
+  background-image: url("../images/oranges.jpeg")
+  background-repeat: no-repeat
+  background-size: cover
+  height: 100%
+  width: 100%
+  color: #fff
+
+.aboutContent
+  height: 900px
+  width: 70%
+  margin-left: 200px
+
+//// Confirmation ////
+
+.confirmationImage
+  height: 600px
+  width: 100%
+  background-image: url("../images/corn.jpeg")

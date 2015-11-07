@@ -18,10 +18,12 @@ gulp.task('html', () => {
 
 gulp.task('script', () => {
   browserify({
-      entries: ['./src/scripts/main.js'],
-      extension: ['.js'],
+      entries: ['./src/scripts/main.jsx'],
+      extensions: ['.js', '.jsx'],
       debug: true
-    }).transform(babelify).bundle()
+    }).transform(babelify.configure({
+      optional: ['es7.classProperties']
+  })).bundle()
     .on('error', function(err) {
       console.log(err.toString());
       this.emit("end");
@@ -44,7 +46,12 @@ gulp.task('styles', () => {
     }));
 });
 
-gulp.task('build', ['html', 'script', 'styles']);
+gulp.task('images', function() {
+  return gulp.src('src/images/**/*')
+    .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('build', ['html', 'script', 'styles', 'images']);
 
 gulp.task("deploy", ["build"], () => {
   ghPages.publish("dist");
@@ -57,7 +64,8 @@ gulp.task('serve', ['build'], () => {
 
   gulp.watch('src/**/*.{html,jade}', ['html']);
   gulp.watch('src/**/*.{scss,sass}', ['styles']);
-  gulp.watch('src/**/*.js', ['script'])
+  gulp.watch(['src/**/*.js', 'src/**/*.jsx'], ['script'])
+  gulp.watch('src/images/**/*', ['images']);
 });
 
 gulp.task('default', ['serve']);

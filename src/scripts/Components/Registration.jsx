@@ -1,47 +1,51 @@
 import React from 'react';
 import Backbone from 'backbone';
 
+import Setup from './Setup';
 import AccountFields from './AccountFields';
+import SurveyFields from './SurveyFields';
 import Confirmation from './Confirmation';
 import Success from './Success';
 
-var SurveyFields = require('./SurveyFields')
 
 var fieldValues = {
-  name       : null,
-  address    : null,
-  phone      : null,
-  email      : null,
-  password   : null,
-  role       : null
+  email                        : null,
+  password                     : null,
+  password_confirmation        : null,
+  name                         : null,
+  cell_phone                   : null,
+  from                         : null,
+  to                           : null
 };
 
-var Registration = React.createClass ({
-  getInitialState: function() {
-    return {
-      step : 1
-    }
-  },
+export default class Registration extends React.Component {
 
-  saveValues: function(fields) {
+  constructor(props) {
+    super(props)
+    this.state = {
+      step: 1
+    }
+  }
+
+  saveValues (fields) {
     return function() {
       fieldValues = Object.assign({}, fieldValues, fields)
     }()
-  },
+  }
 
-  nextStep: function() {
+  nextStep = () => {
     this.setState({
       step : this.state.step + 1
     })
-  },
+  }
 
-  previousStep: function() {
+  previousStep = () => {
     this.setState({
       step : this.state.step - 1
     })
-  },
+  }
 
-  submitRegistration: function() {
+  submitRegistration () {
     // // SOMETHING like this...
     // fetch(API_ROOT + 'http://wastenotio.herokuapp.com/users/transporters', {
     //   method: 'post',
@@ -64,12 +68,12 @@ var Registration = React.createClass ({
     // show the user the error but don't advance
 
     this.nextStep()
-    },
+  }
 
-  showStep: function() {
+  showStep () {
     switch (this.state.step) {
-      case 1:
-        return <AccountFields fieldValues={fieldValues}
+      case  1:
+        return <Setup         fieldValues={fieldValues}
                               nextStep={this.nextStep}
                               saveValues={this.saveValues} />
       case 2:
@@ -84,21 +88,29 @@ var Registration = React.createClass ({
       case 4:
         return <Success fieldValues={fieldValues} />
     }
-  },
+  }
 
-  render: function() {
-    var style = {
-      width : (this.state.step / 4 * 100) + '%'
+  // render () {
+  //   let style = {
+  //     width : (this.state.step / 4 * 100) + '%'
+  //   }
+
+    render () {
+      return(
+        <main>
+          <div className="registrationHeader">
+            <ul className="registrationNav">
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#">Home</a></li>
+            </ul>
+          </div>
+          <div>
+            <span> {this.state.step} </span>
+              {this.showStep()}
+          </div>
+        </main>
+
+      )
     }
-
-    return (
-      <main>
-        <span className="progress-step"> Step {this.state.step}</span>
-        <progress className="progress" style={style}></progress>
-        {this.showStep()}
-      </main>
-    )
-   }
-});
-
-module.exports = Registration
+};

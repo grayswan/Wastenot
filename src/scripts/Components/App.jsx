@@ -6,6 +6,7 @@ import Confirmation from './Confirmation';
 import Registration from './Registration';
 import Success from './Success';
 import SurveyFields from './SurveyFields';
+import About from './About';
 
 class App extends React.Component {
 
@@ -43,20 +44,21 @@ class App extends React.Component {
       case 'registration' :
         currentView = <Registration />;
         break;
+      case 'about' :
+        currentView = <About />;
+        break;
       default :
         currentView = <Splash />;
     }
 
     return (
       <div>
-        <footer className="footer">
-          <div className="container">
+        <div>
             {currentView}
-            <p>
-              #wastenot
-            </p>
           </div>
-        </footer>
+        <div className="footer">
+    
+        </div>
       </div>
     );
   }

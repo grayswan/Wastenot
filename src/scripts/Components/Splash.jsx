@@ -2,60 +2,100 @@ import React from 'react';
 import Backbone from 'backbone';
 import Router from '../router';
 
+const API_ROOT = 'http://wastenotio.herokuapp.com';
+
 class Splash extends React.Component {
-    handleSubmit = () => {
-      console.log('Hello');
-      let name = this.refs.name.value;
-      let password = this.refs.password.value;
-      Backbone.history
-        .navigate(`/index`, true);
+
+    handleSignIn = () => {
+      fetch(API_ROOT + '/login', {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify ({
+          email: this.refs.email.value,
+          password: this.refs.password.value,
+        })
+      }).then((data) => {
+        // WE CAN DO THINGS WITH DATA BACK FROM API HERE.
+        Backbone.history.navigate(`/index`, true);
+      });
     }
 
-    // componentDidMount() {
-    //
-    // }
+    handleSignOut = () => {
+      fetch(API_ROOT + '/logout', {
+        method: 'get',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      }).then((data) => {
+        // WE CAN DO THINGS WITH DATA BACK FROM API HERE.
+        Backbone.history.navigate(`/index`, true);
+      });
+    }
+
 
     render() {
       return (
         <div className="splash">
-          <ul className="cb-slideshow">
-            <li>
-              <span>Image 01</span>
-            </li>
-          </ul>
-          
           <div className="header">
             <ul className="nav">
+              <li><button className="button" onClick={this.handleSignOut}>Logout</button></li>
               <li><a href="#contact">Contact</a></li>
               <li><a href="#about">About</a></li>
               <li className="dropdown"><a href="#">Login</a>
                 <ul className="drop-nav">
                   <li>
-                    <form action="http://wastenotio.herokuapp.com/users/sign_in" method="post">
+                    <form>
                       <label>Name</label>
-                      <input type="text" ref="name" />
+                      <input className="login" type="email" ref="email" />
                       <label>Password</label>
-                      <input type="text" ref="password" />
+                      <input className="login" type="password" ref="password" />
                       <p className="remember me">
                         <label>Remember Me</label>
-                        <input type="checkbox" />
+                        <input className="checkbox" type="checkbox" />
                       </p>
                       <p className="submit">
-                        <button onClick={this.handleSubmit} >Login </button>
+                        <button className="button" onClick={this.handleSignIn} >Login </button>
                       </p>
                     </form>
                   </li>
-                  <li id="newAcount" ><a href="#registration">Create New Account</a></li>
+                  <div id="newAccount" ><a href="#registration">Create New Account</a></div>
                 </ul>
               </li>
-              <li><a href="#home">Home</a></li>
+              <li><a href="#">Home</a></li>
             </ul>
           </div>
-          <div className="inner">
-            <h1>#waste<span id="not">not</span></h1>
+          <div className="logo">
+            <a href="#about"><h1>#waste<span id="not">not</span></h1></a>
           </div>
           <div className="arrow">
-            <img alt="down arrow" height="100px" src="/images/menu_down_arrow.png" />
+            <a href="#thumbnail"><img src="/images/menu_down_arrow.png" alt="down arrow" height="100px" /></a>
+          </div>
+          <div id="thumbnail" className="thumbnail-container">
+            <a href="#registration">
+              <div id="thumb-1" className="thumbnail">
+                <p>How can you get involved?</p>
+              </div>
+            </a>
+            <a href="#about">
+              <div id="thumb-2" className="thumbnail">
+                <p>This is our mission. This is why we do what we do.</p>
+              </div>
+            </a>
+            <a href="http://www.feedingamerica.org/">
+              <div id="thumb-3" className="thumbnail">
+                <p>Statistics about hunger and food waste in America.</p>
+              </div>
+            </a>
+          </div>
+          <div className="supporters-title"><h1>Our Supporters</h1></div>
+          <div className="supporters">
+            <a id="TIY" href="http://theironyard.com/"><img src="../images/ironyard.png"/></a>
+            <a id="SPACC" href="http://www.stpete.com//"><img src="../images/SPACC transparent.png" height="120px"/></a>
+            <a id="greenhouse" href="http://stpetegreenhouse.org/"><img src="../images/greenhouse_logo1.png" height="120px"/></a>
           </div>
        </div>
       );
