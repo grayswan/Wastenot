@@ -355,7 +355,12 @@ th {
   padding: 0; }
 
 body {
-  margin: 0; }
+  font-family: "Hind";
+  margin: 0;
+  background-color: #fff; }
+
+input {
+  border-radius: 4px; }
 
 .splash {
   background-image: url("../images/greenbeans.jpeg");
@@ -368,7 +373,7 @@ body {
   margin-top: -24px;
   width: 100%;
   height: 55px;
-  font-size: 1.5em; }
+  font-size: 2em; }
   .header .nav {
     margin-right: 20px; }
   .header li {
@@ -392,28 +397,55 @@ body {
     display: block; }
 
 .drop-nav {
-  background-color: #fff;
-  border-radius: 5px;
+  font-size: .80em;
+  background-color: #bcbcbc;
+  border-radius: 4px;
   position: absolute;
-  margin-left: -200px;
+  margin-left: -90px;
   display: none; }
   .drop-nav li {
     margin-left: -50px; }
 
-#newAccount a:link {
-  color: black; }
+.login {
+  display: flex;
+  align-self: flex-end;
+  border-radius: 4px; }
 
-#newAccount a:visited {
-  color: black; }
+.button {
+  border-radius: 4px;
+  background-color: #fff; }
+  .button:hover {
+    background-color: #A2381C; }
 
-#newAccount a:hover {
-  color: #A2381C; }
+.checkbox {
+  margin-left: 20px; }
 
-.inner {
+#newAccount {
+  margin-left: -30px;
+  margin-bottom: 20px;
+  font-size: 1.1em; }
+  #newAccount a:link {
+    color: black; }
+  #newAccount a:visited {
+    color: black; }
+  #newAccount a:hover {
+    color: #A2381C; }
+
+.logo {
   font-family: "Hind";
   color: #fff;
   font-size: 5em;
-  text-align: center; }
+  text-align: center;
+  margin-top: 190px; }
+  .logo a:link {
+    text-decoration: none;
+    color: #fff; }
+  .logo a::before {
+    text-decoration: none;
+    color: #fff; }
+  .logo a:visited {
+    text-decoration: none;
+    color: #fff; }
 
 #not {
   color: #A2381C; }
@@ -422,3 +454,234 @@ body {
   position: relative;
   margin-top: 250px;
   text-align: center; }
+
+.footer {
+  height: 50px;
+  width: 100%; }
+
+.thumbnail-container {
+  width: 100%;
+  height: 425px;
+  margin-top: 150px;
+  display: flex;
+  align-items: center; }
+  .thumbnail-container a:link {
+    text-decoration: none;
+    color: black; }
+  .thumbnail-container a::before {
+    text-decoration: none;
+    color: black; }
+  .thumbnail-container a:visited {
+    text-decoration: none;
+    color: black; }
+
+.thumbnail {
+  border: 2px solid;
+  border-radius: 4px;
+  height: 440px;
+  width: 360px;
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  color: #fff; }
+  .thumbnail a:link {
+    text-decoration: none; }
+  .thumbnail a::before {
+    text-decoration: none; }
+  .thumbnail a:visited {
+    text-decoration: none; }
+
+#thumb-1 {
+  background-image: url("../images/kitchen.jpeg");
+  background-size: cover; }
+
+#thumb-2 {
+  background-image: url("../images/corn.jpeg");
+  background-size: cover; }
+
+#thumb-3 {
+  background-image: url("http://www.feedingamerica.org/assets/images/section-landing-page-boxes/section-or-families-mobile-pantry-expjan2016.jpg");
+  background-size: cover; }
+
+.supporters-title {
+  margin-top: 100px;
+  margin-bottom: -100px;
+  text-align: center; }
+
+.supporters {
+  height: 500px;
+  width: 100px;
+  margin-top: 150px;
+  display: inline-flex;
+  margin-left: 500px;
+  margin-right: 40px; }
+
+#TIY {
+  margin-right: 80px; }
+
+#SPACC {
+  margin-right: 80px; }
+
+.registrationHeader {
+  margin-top: -24px;
+  width: 100%;
+  height: 55px;
+  font-size: 2em;
+  border-bottom: 2px solid; }
+  .registrationHeader .RegistrationNav {
+    margin-right: 20px; }
+  .registrationHeader li {
+    display: inline-block;
+    float: right;
+    padding: 15px;
+    list-style: none;
+    font-family: "Hind"; }
+  .registrationHeader a:link {
+    text-decoration: none;
+    color: black; }
+  .registrationHeader a:visited {
+    text-decoration: none;
+    color: black; }
+  .registrationHeader a:hover {
+    color: #A2381C; }
+
+.step-1 {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .step-1 .form-fields-1 {
+    margin-top: -20px;
+    padding: 20px;
+    font-size: 1.5em;
+    align-content: center; }
+  .step-1 h1 {
+    display: flex;
+    font-size: 2.5em; }
+  .step-1 li {
+    list-style: none; }
+  .step-1 input {
+    border-radius: 4px;
+    margin: 10px; }
+
+#email {
+  margin-left: 50px; }
+
+#password {
+  margin-left: 22px; }
+
+#setUpButton {
+  border-radius: 4px;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-left: 100px; }
+  #setUpButton:hover {
+    background-color: #A2381C; }
+
+.image {
+  display: block;
+  float: right;
+  margin-top: 50px; }
+
+.setupImage {
+  height: 600px;
+  width: 100%;
+  background-image: url("../images/bananas.jpeg"); }
+
+.step-2 {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .step-2 h1 {
+    display: flex;
+    font-size: 2.5em; }
+  .step-2 .form-fields-2 {
+    margin-top: -20px;
+    padding: 20px;
+    font-size: 1.5em;
+    align-content: center; }
+    .step-2 .form-fields-2 li {
+      list-style: none;
+      display: flex; }
+
+#surveyButton-1 {
+  border-radius: 4px;
+  width: 75px;
+  height: 40px;
+  background-color: #fff; }
+  #surveyButton-1:hover {
+    background-color: #B23210; }
+
+#surveyButton-2 {
+  border-radius: 4px;
+  width: 200px;
+  height: 40px;
+  margin-left: 20px;
+  background-color: #fff; }
+  #surveyButton-2:hover {
+    background-color: #B23210; }
+
+.drop-form {
+  margin-left: -50px;
+  margin-top: -20px;
+  font-size: 1em; }
+  .drop-form h3 {
+    margin-left: auto;
+    margin-top: -30px; }
+  .drop-form label {
+    margin-left: auto; }
+
+.role-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .role-info input {
+    height: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+
+#avail-title {
+  margin-left: -30px; }
+
+.availability {
+  display: inline-flex; }
+  .availability p {
+    font-size: .75em;
+    margin-right: 10px;
+    margin-top: -1px; }
+
+.surveyFieldImage {
+  height: 600px;
+  width: 100%;
+  background-image: url("../images/carrots.jpeg");
+  background-size: cover; }
+
+#vol-name {
+  margin-left: 138px; }
+
+#vol-phone {
+  margin-left: 88px; }
+
+#from {
+  margin-left: 20px; }
+
+.aboutContainer {
+  background-image: url("../images/oranges.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  color: #fff; }
+
+.aboutContent {
+  height: 900px;
+  width: 70%;
+  margin-left: 200px; }
+
+.confirmationImage {
+  height: 600px;
+  width: 100%;
+  background-image: url("../images/corn.jpeg"); }
