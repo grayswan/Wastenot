@@ -4,7 +4,8 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Oxygen|Hind);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lora|Merriweather|Cinzel);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -355,25 +356,25 @@ th {
   padding: 0; }
 
 body {
-  font-family: "Hind";
   margin: 0;
-  background-color: #fff; }
-
-input {
-  border-radius: 4px; }
+  font-family: "Oxygen"; }
 
 .splash {
   background-image: url("../images/greenbeans.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 900px; }
+  height: 900px;
+  margin-top: -40px; }
+  .splash ::after {
+    opacity: .5; }
 
 .header {
-  margin-top: -24px;
   width: 100%;
-  height: 55px;
-  font-size: 2em; }
+  height: 75px;
+  font-size: 1.8em;
+  border-bottom: 2px;
+  border-bottom-style: groove; }
   .header .nav {
     margin-right: 20px; }
   .header li {
@@ -381,7 +382,7 @@ input {
     float: right;
     padding: 15px;
     list-style: none;
-    font-family: "Hind"; }
+    font-family: "Oxygen"; }
   .header a:link {
     text-decoration: none;
     color: #fff; }
@@ -397,25 +398,23 @@ input {
     display: block; }
 
 .drop-nav {
-  font-size: .80em;
-  background-color: #bcbcbc;
-  border-radius: 4px;
+  font-size: .8em;
+  background-color: #fff;
   position: absolute;
-  margin-left: -90px;
-  display: none; }
+  margin-top: 5px;
+  display: none;
+  z-index: 9000;
+  box-shadow: 0 0 10px #000; }
   .drop-nav li {
     margin-left: -50px; }
 
 .login {
   display: flex;
   align-self: flex-end;
-  border-radius: 4px; }
+  margin-top: 10px; }
 
 .button {
-  border-radius: 4px;
   background-color: #fff; }
-  .button:hover {
-    background-color: #A2381C; }
 
 .checkbox {
   margin-left: 20px; }
@@ -432,11 +431,13 @@ input {
     color: #A2381C; }
 
 .logo {
-  font-family: "Hind";
+  font-family: "Lora";
   color: #fff;
+  text-shadow: 0 0 10px #000;
   font-size: 5em;
+  position: relative;
   text-align: center;
-  margin-top: 190px; }
+  margin-top: 200px; }
   .logo a:link {
     text-decoration: none;
     color: #fff; }
@@ -448,21 +449,18 @@ input {
     color: #fff; }
 
 #not {
-  color: #A2381C; }
+  color: #A2381C;
+  text-shadow: 0 0 10px #5e5d5d; }
 
 .arrow {
   position: relative;
   margin-top: 250px;
   text-align: center; }
 
-.footer {
-  height: 50px;
-  width: 100%; }
-
 .thumbnail-container {
   width: 100%;
-  height: 425px;
-  margin-top: 150px;
+  height: 550px;
+  margin-top: 200px;
   display: flex;
   align-items: center; }
   .thumbnail-container a:link {
@@ -476,20 +474,21 @@ input {
     color: black; }
 
 .thumbnail {
-  border: 2px solid;
-  border-radius: 4px;
   height: 440px;
   width: 360px;
-  margin: 100px;
+  margin: 98px;
   display: flex;
   align-items: center;
-  color: #fff; }
+  color: #fff;
+  font-family: "Oxygen";
+  font-size: 2em; }
   .thumbnail a:link {
     text-decoration: none; }
   .thumbnail a::before {
     text-decoration: none; }
   .thumbnail a:visited {
-    text-decoration: none; }
+    text-decoration: none;
+    border-style: none; }
 
 #thumb-1 {
   background-image: url("../images/kitchen.jpeg");
@@ -504,7 +503,7 @@ input {
   background-size: cover; }
 
 .supporters-title {
-  margin-top: 100px;
+  margin-top: 200px;
   margin-bottom: -100px;
   text-align: center; }
 
@@ -513,21 +512,23 @@ input {
   width: 100px;
   margin-top: 150px;
   display: inline-flex;
-  margin-left: 500px;
+  margin-left: 475px;
   margin-right: 40px; }
 
 #TIY {
-  margin-right: 80px; }
+  margin-right: 120px; }
 
 #SPACC {
-  margin-right: 80px; }
+  margin-right: 120px; }
 
 .registrationHeader {
   margin-top: -24px;
   width: 100%;
   height: 55px;
   font-size: 2em;
-  border-bottom: 2px solid; }
+  border-bottom: 2px solid;
+  background-color: #fff;
+  margin-top: -25px; }
   .registrationHeader .RegistrationNav {
     margin-right: 20px; }
   .registrationHeader li {
@@ -535,7 +536,7 @@ input {
     float: right;
     padding: 15px;
     list-style: none;
-    font-family: "Hind"; }
+    font-family: "Oxygen"; }
   .registrationHeader a:link {
     text-decoration: none;
     color: black; }
@@ -546,95 +547,91 @@ input {
     color: #A2381C; }
 
 .step-1 {
-  height: 450px;
+  height: 750px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background-image: url("../images/bananas.jpeg"); }
   .step-1 .form-fields-1 {
+    height: 400px;
+    width: 35%;
+    background-color: #fff;
     margin-top: -20px;
     padding: 20px;
-    font-size: 1.5em;
+    margin-top: 100px;
     align-content: center; }
-  .step-1 h1 {
-    display: flex;
-    font-size: 2.5em; }
-  .step-1 li {
-    list-style: none; }
-  .step-1 input {
-    border-radius: 4px;
-    margin: 10px; }
+    .step-1 .form-fields-1 li {
+      list-style: none;
+      font-size: 1.5em; }
+      .step-1 .form-fields-1 li h3 {
+        text-decoration: underline;
+        font-family: "Oxygen";
+        text-align: center;
+        display: flex; }
+    .step-1 .form-fields-1 input {
+      margin: 10px; }
 
 #email {
-  margin-left: 50px; }
+  margin-left: 53px; }
 
 #password {
-  margin-left: 22px; }
+  margin-left: 25px; }
 
 #setUpButton {
-  border-radius: 4px;
   background-color: #fff;
   margin-top: 20px;
-  margin-left: 100px; }
-  #setUpButton:hover {
-    background-color: #A2381C; }
-
-.image {
-  display: block;
-  float: right;
-  margin-top: 50px; }
-
-.setupImage {
-  height: 600px;
-  width: 100%;
-  background-image: url("../images/bananas.jpeg"); }
+  margin-left: 225px; }
 
 .step-2 {
-  height: 450px;
+  height: 750px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .step-2 h1 {
-    display: flex;
-    font-size: 2.5em; }
+  align-items: center;
+  background-image: url("../images/carrots.jpeg");
+  background-size: cover; }
   .step-2 .form-fields-2 {
-    margin-top: -20px;
+    margin-top: 100px;
     padding: 20px;
-    font-size: 1.5em;
-    align-content: center; }
+    align-content: center;
+    background-color: #fff;
+    height: auto; }
     .step-2 .form-fields-2 li {
       list-style: none;
-      display: flex; }
+      font-size: 1.5em; }
+      .step-2 .form-fields-2 li h3 {
+        text-decoration: underline;
+        font-family: "Oxygen";
+        text-align: center;
+        display: flex; }
+
+#radio {
+  margin: 20px; }
 
 #surveyButton-1 {
-  border-radius: 4px;
+  margin-top: 20px;
+  margin-left: 190px;
   width: 75px;
-  height: 40px;
   background-color: #fff; }
-  #surveyButton-1:hover {
-    background-color: #B23210; }
 
 #surveyButton-2 {
-  border-radius: 4px;
   width: 200px;
-  height: 40px;
-  margin-left: 20px;
+  margin-left: 40px;
   background-color: #fff; }
-  #surveyButton-2:hover {
-    background-color: #B23210; }
 
 .drop-form {
   margin-left: -50px;
-  margin-top: -20px;
-  font-size: 1em; }
-  .drop-form h3 {
+  margin-top: -20px; }
+  .drop-form h2 {
+    font-size: 2.5em;
     margin-left: auto;
     margin-top: -30px; }
   .drop-form label {
     margin-left: auto; }
 
 .role-info {
+  font-size: 1em;
   display: flex;
   flex-direction: column;
   align-items: flex-start; }
@@ -644,20 +641,14 @@ input {
     margin-top: 10px; }
 
 #avail-title {
-  margin-left: -30px; }
+  margin-bottom: -25px;
+  margin-left: -38px; }
 
 .availability {
   display: inline-flex; }
   .availability p {
     font-size: .75em;
-    margin-right: 10px;
-    margin-top: -1px; }
-
-.surveyFieldImage {
-  height: 600px;
-  width: 100%;
-  background-image: url("../images/carrots.jpeg");
-  background-size: cover; }
+    margin-right: 10px; }
 
 #vol-name {
   margin-left: 138px; }
@@ -666,22 +657,103 @@ input {
   margin-left: 88px; }
 
 #from {
-  margin-left: 20px; }
+  margin-top: 13px;
+  margin-left: 20px;
+  margin-right: 15px; }
+
+#to {
+  margin-top: 13px;
+  margin-left: 10px; }
+
+#donor-name {
+  margin-left: 10px; }
+
+#donor-address {
+  width: 487px;
+  margin-left: 10px; }
+
+#donor-contact {
+  width: 420px;
+  margin-left: 10px; }
+
+#donor-phone {
+  width: 418px;
+  margin-left: 10px; }
+
+.step-3 {
+  height: 750px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/corn.jpeg");
+  background-size: cover; }
+  .step-3 .form-fields-3 {
+    width: 500px;
+    margin-top: 100px;
+    padding: 20px;
+    align-content: center;
+    background-color: #fff;
+    height: auto; }
+    .step-3 .form-fields-3 li {
+      list-style: none;
+      font-size: 1.5em; }
+    .step-3 .form-fields-3 h3 {
+      text-decoration: underline;
+      font-family: "Oxygen";
+      text-align: center;
+      display: flex; }
+
+#surveyButton-1-conf {
+  margin-top: 20px;
+  width: 75px;
+  background-color: #fff; }
+
+#surveyButton-2-conf {
+  margin-bottom: 40px;
+  width: 250px;
+  background-color: #fff; }
 
 .aboutContainer {
   background-image: url("../images/oranges.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: -30px;
   height: 100%;
   width: 100%;
-  color: #fff; }
+  color: #fff;
+  text-shadow: 0 0 10px #000; }
 
 .aboutContent {
   height: 900px;
   width: 70%;
   margin-left: 200px; }
 
-.confirmationImage {
-  height: 600px;
-  width: 100%;
-  background-image: url("../images/corn.jpeg"); }
+.profile-container {
+  margin: 0;
+  background-color: #464646; }
+
+.profile-body {
+  display: in-block;
+  float: right;
+  text-align: center;
+  height: 750px;
+  width: 75%;
+  border-left: 2px solid; }
+  .profile-body li {
+    list-style: none; }
+
+.account-info {
+  margin-left: 40px; }
+
+.profile-sidebar {
+  display: block;
+  float: left;
+  height: 750px;
+  background-color: #fff;
+  width: 22%; }
+  .profile-sidebar li {
+    list-style: none; }
+
+.contact-container {
+  background-color: #464646; }
