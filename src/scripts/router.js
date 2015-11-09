@@ -8,7 +8,9 @@ class Router extends Backbone.Router {
       '': 'index',
       'registration': 'registration',
       'about': 'about',
-      'thumbnail': 'thumbnail'
+      'thumbnail': 'thumbnail',
+      'profile': 'profile',
+      'contact': 'contact'
     }
   }
 
@@ -26,6 +28,14 @@ class Router extends Backbone.Router {
 
   thumbnail() {
     this.current = 'thumbnail';
+  }
+
+  profile() {
+    this.current = 'profile';
+  }
+
+  contact() {
+    this.current = 'contact';
   }
 
   initialize() {

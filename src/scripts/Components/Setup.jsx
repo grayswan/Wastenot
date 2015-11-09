@@ -5,30 +5,31 @@ const API_ROOT = 'http://wastenotio.herokuapp.com';
 export default class Setup extends React.Component {
 
   handleSetup = (event) => {
-    // fetch(API_ROOT + '/users', {
-    //   method: 'post',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify ({
-    //     email: 'hello@example.com',
-    //     password: 'doesitwork',
-    //     password_confirmation: 'doesitwork'
-    //   })
-    // }).then(() => {
+    fetch(API_ROOT + '/users', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify ({
+        email: 'email',
+        password: 'password',
+        password_confirmation: 'password_confirmation',
+
+      })
+    }).then(() => {
       this.nextStep(event);
-  //   }).catch(function(ex) {
-  //     console.log('failed', ex);
-  //   });
+    }).catch(function(ex) {
+      console.log('failed', ex);
+    });
   }
 
   render () {
     return (
       <div className="container-step-1">
         <form className="step-1">
-          <h1>Create an Account</h1>
           <ul className="form-fields-1">
+            <li><h3>CREATE AN ACCOUNT</h3></li>
             <li>
               <label>Email Address</label>
               <input id="email" type="email" ref="email" defaultValue={this.props.fieldValues.email} />
@@ -46,8 +47,6 @@ export default class Setup extends React.Component {
             </li>
           </ul>
         </form>
-        <div className="setupImage">
-        </div>
       </div>
     )
   }

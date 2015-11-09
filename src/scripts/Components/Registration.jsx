@@ -2,7 +2,6 @@ import React from 'react';
 import Backbone from 'backbone';
 
 import Setup from './Setup';
-import AccountFields from './AccountFields';
 import SurveyFields from './SurveyFields';
 import Confirmation from './Confirmation';
 import Success from './Success';
@@ -13,6 +12,7 @@ var fieldValues = {
   password                     : null,
   password_confirmation        : null,
   name                         : null,
+  address                      : null,
   cell_phone                   : null,
   from                         : null,
   to                           : null
@@ -45,29 +45,30 @@ export default class Registration extends React.Component {
     })
   }
 
-  submitRegistration () {
-    // // SOMETHING like this...
-    // fetch(API_ROOT + 'http://wastenotio.herokuapp.com/users/transporters', {
+  submitRegistration (event) {
+    //
+    // fetch (API_ROOT + 'http://wastenotio.herokuapp.com/users/transporters', {
     //   method: 'post',
     //   headers: {
     //     'Accept': 'application/json',
     //     'Content-Type': 'application/json'
     //   },
     //   body: JSON.stringify({
-    //     user_name: fieldValues.name,
-    //     // ...
-    //   }).then(() => {
-    //     this.nextStep();
+    //     email                : fieldValues.email,
+    //     password             : fieldValues.password,
+    //     password_confirmation: fieldValues.password_confirmation,
+    //     name                 : fieldValues.name,
+    //     address              : fieldValues.address,
+    //     cell_phone           : fieldValues.cell_phone,
+    //     from                 : fieldValues.from,
+    //     to                   : fieldValues.to
+    //   })
+    //   .then(() => {
+        this.nextStep();
     //   }).catch(function(ex) {
     //     console.log('failed', ex);
-    //   }
+    //   })
     // })
-
-    // Handle via ajax submitting the user data, upon
-    // success return this.nextStop(). If it fails,
-    // show the user the error but don't advance
-
-    this.nextStep()
   }
 
   showStep () {
@@ -90,11 +91,6 @@ export default class Registration extends React.Component {
     }
   }
 
-  // render () {
-  //   let style = {
-  //     width : (this.state.step / 4 * 100) + '%'
-  //   }
-
     render () {
       return(
         <main>
@@ -106,8 +102,7 @@ export default class Registration extends React.Component {
             </ul>
           </div>
           <div>
-            <span> {this.state.step} </span>
-              {this.showStep()}
+            {this.showStep()}
           </div>
         </main>
 

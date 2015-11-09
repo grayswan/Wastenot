@@ -1,75 +1,20 @@
 import React from 'react';
 import Backbone from 'backbone';
 import Router from '../router';
+import $ from 'jquery';
 
-const API_ROOT = 'http://wastenotio.herokuapp.com';
+import Navigation from './navigation';
 
 class Splash extends React.Component {
-
-    handleSignIn = () => {
-      fetch(API_ROOT + '/login', {
-        method: 'post',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify ({
-          email: this.refs.email.value,
-          password: this.refs.password.value,
-        })
-      }).then((data) => {
-        // WE CAN DO THINGS WITH DATA BACK FROM API HERE.
-        Backbone.history.navigate(`/index`, true);
-      });
-    }
-
-    handleSignOut = () => {
-      fetch(API_ROOT + '/logout', {
-        method: 'get',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      }).then((data) => {
-        // WE CAN DO THINGS WITH DATA BACK FROM API HERE.
-        Backbone.history.navigate(`/index`, true);
-      });
-    }
-
 
     render() {
       return (
         <div className="splash">
           <div className="header">
-            <ul className="nav">
-              <li><button className="button" onClick={this.handleSignOut}>Logout</button></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#about">About</a></li>
-              <li className="dropdown"><a href="#">Login</a>
-                <ul className="drop-nav">
-                  <li>
-                    <form>
-                      <label>Name</label>
-                      <input className="login" type="email" ref="email" />
-                      <label>Password</label>
-                      <input className="login" type="password" ref="password" />
-                      <p className="remember me">
-                        <label>Remember Me</label>
-                        <input className="checkbox" type="checkbox" />
-                      </p>
-                      <p className="submit">
-                        <button className="button" onClick={this.handleSignIn} >Login </button>
-                      </p>
-                    </form>
-                  </li>
-                  <div id="newAccount" ><a href="#registration">Create New Account</a></div>
-                </ul>
-              </li>
-              <li><a href="#">Home</a></li>
-            </ul>
+            <Navigation />
           </div>
           <div className="logo">
-            <a href="#about"><h1>#waste<span id="not">not</span></h1></a>
+            <h1>#waste<span id="not">not</span></h1>
           </div>
           <div className="arrow">
             <a href="#thumbnail"><img src="/images/menu_down_arrow.png" alt="down arrow" height="100px" /></a>
@@ -77,17 +22,17 @@ class Splash extends React.Component {
           <div id="thumbnail" className="thumbnail-container">
             <a href="#registration">
               <div id="thumb-1" className="thumbnail">
-                <p>How can you get involved?</p>
+                <p>Get involved?</p>
               </div>
             </a>
             <a href="#about">
               <div id="thumb-2" className="thumbnail">
-                <p>This is our mission. This is why we do what we do.</p>
+                <p>This mission of #wastenot is to help redirect excess food to places that have food need.</p>
               </div>
             </a>
             <a href="http://www.feedingamerica.org/">
               <div id="thumb-3" className="thumbnail">
-                <p>Statistics about hunger and food waste in America.</p>
+                <p>Hunger and Food Waste in America.</p>
               </div>
             </a>
           </div>
@@ -97,7 +42,7 @@ class Splash extends React.Component {
             <a id="SPACC" href="http://www.stpete.com//"><img src="../images/SPACC transparent.png" height="120px"/></a>
             <a id="greenhouse" href="http://stpetegreenhouse.org/"><img src="../images/greenhouse_logo1.png" height="120px"/></a>
           </div>
-       </div>
+        </div>
       );
     }
   }

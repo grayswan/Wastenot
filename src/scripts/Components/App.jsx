@@ -7,6 +7,8 @@ import Registration from './Registration';
 import Success from './Success';
 import SurveyFields from './SurveyFields';
 import About from './About';
+import Profile from './Profile';
+import Contact from './Contact';
 
 class App extends React.Component {
 
@@ -47,18 +49,20 @@ class App extends React.Component {
       case 'about' :
         currentView = <About />;
         break;
+      case 'profile' :
+        currentView = <Profile />;
+        break;
+      case 'contact' :
+        currentView = <Contact />;
+        break;
       default :
         currentView = <Splash />;
     }
 
     return (
       <div>
-        <div>
-            {currentView}
-          </div>
-        <div className="footer">
-    
-        </div>
+        {currentView}
+        <div className="footer"></div>
       </div>
     );
   }
