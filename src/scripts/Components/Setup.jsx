@@ -52,7 +52,7 @@ export default class Setup extends React.Component {
   }
 
   nextStep (e) {
-    e.preventDefault()
+    // e.preventDefault()
 
     let data = {
       email        : this.refs.email.value,

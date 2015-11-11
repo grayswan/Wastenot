@@ -10,9 +10,9 @@ export default class Contact extends React.Component {
         <div className="header">
           <Navigation />
         </div>
-        <div>
-          <h1>CONTACT US</h1>
-          <ul>
+        <div className="contact-div">
+          <ul className="contact">
+            <li><h1>CONTACT US</h1></li>
             <li>
               <label>Name</label>
               <input type="text"/>

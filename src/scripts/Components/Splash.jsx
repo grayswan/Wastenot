@@ -22,17 +22,17 @@ class Splash extends React.Component {
           <div id="thumbnail" className="thumbnail-container">
             <a href="#registration">
               <div id="thumb-1" className="thumbnail">
-                <p>Get involved?</p>
+                <div className="thumb-text"><p>Get Involved</p></div>
               </div>
             </a>
             <a href="#about">
               <div id="thumb-2" className="thumbnail">
-                <p>This mission of #wastenot is to help redirect excess food to places that have food need.</p>
+                <div className="thumb-text"><p>Our Mission</p></div>
               </div>
             </a>
             <a href="http://www.feedingamerica.org/">
               <div id="thumb-3" className="thumbnail">
-                <p>Hunger and Food Waste in America.</p>
+                <div className="thumb-text"><p>Learn More</p></div>
               </div>
             </a>
           </div>

@@ -16,17 +16,6 @@ export default class Navigation extends React.Component {
   }
 
   handleSignIn = () => {
-    // fetch(API_ROOT + '/login', {
-    //   method: 'post',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify ({
-    //     email: this.refs.email.value,
-    //     password: this.refs.password.value,
-    //   })
-    // })
     $.ajax(API_ROOT + '/login', { method: 'POST', data: {
       email: this.refs.email.value,
       password: this.refs.password.value,
@@ -60,7 +49,7 @@ export default class Navigation extends React.Component {
 
     if (currentUser()) {
       navItems.push(
-        <li key="logout"><button className="button" onClick={this.handleSignOut}>Logout</button></li>,
+        <li key="logout"><a onClick={this.handleSignOut}>Logout</a></li>,
         <li key="profile"><a href="#profile">Profile</a></li>
       );
     } else {

@@ -45,30 +45,30 @@ export default class Registration extends React.Component {
     })
   }
 
-  submitRegistration (event) {
-    //
-    // fetch (API_ROOT + 'http://wastenotio.herokuapp.com/users/transporters', {
-    //   method: 'post',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     email                : fieldValues.email,
-    //     password             : fieldValues.password,
-    //     password_confirmation: fieldValues.password_confirmation,
-    //     name                 : fieldValues.name,
-    //     address              : fieldValues.address,
-    //     cell_phone           : fieldValues.cell_phone,
-    //     from                 : fieldValues.from,
-    //     to                   : fieldValues.to
-    //   })
-    //   .then(() => {
-        this.nextStep();
-    //   }).catch(function(ex) {
-    //     console.log('failed', ex);
-    //   })
-    // })
+  submitRegistration = (event) => {
+
+    fetch ('http://wastenotio.herokuapp.com/users/transporters', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email                : fieldValues.email,
+        password             : fieldValues.password,
+        password_confirmation: fieldValues.password_confirmation,
+        name                 : fieldValues.name,
+        address              : fieldValues.address,
+        cell_phone           : fieldValues.phone,
+        from                 : fieldValues.from,
+        to                   : fieldValues.to,
+        org_name             : fieldValues.org_name
+      })
+    }).then(() => {
+      this.nextStep();
+    }).catch(function(ex) {
+      console.log('failed', ex);
+    })
   }
 
   showStep () {
@@ -87,7 +87,7 @@ export default class Registration extends React.Component {
                               previousStep={this.previousStep}
                               submitRegistration={this.submitRegistration} />
       case 4:
-        return <Success fieldValues={fieldValues} />
+        return <Success       fieldValues={fieldValues} />
     }
   }
 

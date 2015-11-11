@@ -1,5 +1,7 @@
 import React from 'react';
 
+const API_ROOT = 'http://wastenotio.herokuapp.com';
+
 export default class SurveyFields extends React.Component {
 
   constructor(props) {
@@ -35,38 +37,69 @@ export default class SurveyFields extends React.Component {
     case 'Volunteer':
       return (
         <div>
-          <h3>Volunteer</h3>
-          <form className="drop-form">
-            <ul className="role-info">
-              <li>
-                <label>Name</label>
-                <input id="vol-name" type="text" ref="name" defaultValue={this.props.fieldValues.name} />
-              </li>
-              <li>
-                <label>Cell Phone</label>
-                <input id="vol-phone" type="tel" ref="phone" defaultValue={this.props.fieldValues.cell_phone} />
-              </li>
-              <ul className="availability">
-                <li><label id="avail-title">Availability</label></li>
-                <li><p id="from" >From:</p></li>
-                <li><input type="time" ref="from" defaultValue={this.props.fieldValues.from} /></li>
-                <li><p id="to" >To:</p></li>
-                <li><input type="time" ref="to" defaultValue={this.props.fieldValues.to} /></li>
+            <h1 className="role-header">Volunteer</h1>
+            <form className="drop-form">
+              <ul className="role-info">
+                <li>
+                  <label>Name</label>
+                  <input id="vol-name" type="text" ref="name" defaultValue={this.props.fieldValues.name} />
+                </li>
+                <li>
+                  <label>Cell Phone</label>
+                  <input id="vol-phone" type="tel" ref="phone" defaultValue={this.props.fieldValues.cell_phone} />
+                </li>
+                <ul className="availability">
+                  <li><label id="avail-title">Availability</label></li>
+                  <li><p id="from" >From:</p></li>
+                  <li><input type="time" ref="from" defaultValue={this.props.fieldValues.from} /></li>
+                  <li><p id="to" >To:</p></li>
+                  <li><input type="time" ref="to" defaultValue={this.props.fieldValues.to} /></li>
+                </ul>
               </ul>
-            </ul>
-          </form>
-        </div>
-      )
-      break;
-    case 'Donor':
-      return (
-        <div>
-          <h2>Donor</h2>
+            </form>
+          </div>
+        )
+        break;
+      case 'Donor':
+        return (
+          <div>
+            <h1 className="role-header">Donor</h1>
+            <form className="drop-form">
+              <input type="hidden" ref="to" />
+              <input type="hidden" ref="from" />
+              <ul className="role-info">
+                <li>
+                  <label>Organization/ Business Name</label>
+                  <input id="donor-name" type="text" ref="name" defaultValue={this.props.fieldValues.name} />
+                </li>
+                <li>
+                  <label>Address</label>
+                  <input id="donor-address" type="text" ref="address" defaultValue={this.props.fieldValues.name} />
+                </li>
+                <li>
+                  <label>Contact Name</label>
+                  <input id="donor-contact" type="text" ref="contact_name" defaultValue={this.props.fieldValues.name} />
+                </li>
+                <li>
+                  <label>Contact Phone</label>
+                  <input id="donor-phone" type="text" ref="phone" defaultValue={this.props.fieldValues.name} />
+                </li>
+              </ul>
+            </form>
+          </div>
+          )
+        break;
+      case 'Shelter':
+        return (
+          <div>
+          <h1 className="role-header">Shelter</h1>
           <form className="drop-form">
+            <input type="hidden" ref="to" />
+            <input type="hidden" ref="from" />
             <ul className="role-info">
               <li>
-                <label>Organization/ Business Name</label>
-                <input id="donor-name" type="text" ref="name" defaultValue={this.props.fieldValues.name} />
+                <label>Organization Name</label>
+                <input id="shelter-name" type="text" ref="name" defaultValue={this.props.fieldValues.name} />
               </li>
               <li>
                 <label>Address</label>
@@ -83,10 +116,7 @@ export default class SurveyFields extends React.Component {
             </ul>
           </form>
         </div>
-        )
-      break;
-    case 'Shelter':
-      return <h2>Shelter</h2>;
+      )
       break;
     default:
       return <h2></h2>;
@@ -118,13 +148,13 @@ export default class SurveyFields extends React.Component {
   nextStep = () => {
     let role = document.querySelector('input:checked');
     let data = {
-      role           : this.refs.name.value,
+      role           : role.value,
       name           : this.refs.name.value,
-      address        : this.refs.name.value,
-      phone          : this.refs.name.value,
-      contact_name   : this.refs.name.value,
-      from           : this.refs.name.value,
-      to             : this.refs.name.value
+      address        : this.refs.address.value,
+      phone          : this.refs.phone.value,
+      contact_name   : this.refs.contact_name.value,
+      from           : this.refs.from.value,
+      to             : this.refs.to.value
     }
 
     this.props.saveValues(data);

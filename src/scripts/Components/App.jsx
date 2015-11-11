@@ -15,7 +15,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // currentUser: User.current(),
       currentRoute: props.router.current
     }
   }
@@ -34,7 +33,6 @@ class App extends React.Component {
 
   onRoute = () => {
     this.setState({
-      // currentUser: User.current(),
       currentRoute: this.props.router.current
     });
   }
@@ -62,7 +60,9 @@ class App extends React.Component {
     return (
       <div>
         {currentView}
-        <div className="footer"></div>
+        <div className="footer">
+          <div></div>
+        </div>
       </div>
     );
   }

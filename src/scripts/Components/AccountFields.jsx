@@ -31,7 +31,7 @@ export default class AccountFields extends React.Component {
   }
 
   nextStep (e) {
-    e.preventDefault()
+    // e.preventDefault()
 
     let data = {
       name      : this.refs.name.value,
