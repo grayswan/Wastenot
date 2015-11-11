@@ -357,24 +357,25 @@ th {
 
 body {
   margin: 0;
-  font-family: "Oxygen"; }
+  font-family: "Oxygen";
+  color: #464646;
+  background-color: #eeeeee; }
 
 .splash {
   background-image: url("../images/greenbeans.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 900px;
+  height: 100vh;
   margin-top: -40px; }
   .splash ::after {
     opacity: .5; }
 
 .header {
   width: 100%;
-  height: 75px;
-  font-size: 1.8em;
-  border-bottom: 2px;
-  border-bottom-style: groove; }
+  height: 120px;
+  font-size: 2em;
+  border-bottom: 2px; }
   .header .nav {
     margin-right: 20px; }
   .header li {
@@ -390,54 +391,57 @@ body {
     text-decoration: none;
     color: #fff; }
   .header a:hover {
-    color: #A2381C; }
+    color: #464646; }
 
 .dropdown {
-  position: relative; }
+  position: relative;
+  font-family: "Oxygen"; }
   .dropdown:hover > .drop-nav {
     display: block; }
 
 .drop-nav {
   font-size: .8em;
-  background-color: #fff;
+  background-color: #eeeeee;
   position: absolute;
   margin-top: 5px;
+  border-radius: 4px;
   display: none;
   z-index: 9000;
   box-shadow: 0 0 10px #000; }
   .drop-nav li {
-    margin-left: -50px; }
+    margin-left: -50px;
+    font-family: "Oxygen"; }
 
 .login {
+  background-color: #fff;
   display: flex;
   align-self: flex-end;
-  margin-top: 10px; }
-
-.button {
-  background-color: #fff; }
+  margin-top: 10px;
+  border-radius: 4px; }
 
 .checkbox {
   margin-left: 20px; }
 
 #newAccount {
+  font-family: "Oxygen";
   margin-left: -30px;
   margin-bottom: 20px;
   font-size: 1.1em; }
   #newAccount a:link {
-    color: black; }
+    color: #464646; }
   #newAccount a:visited {
-    color: black; }
+    color: #464646; }
   #newAccount a:hover {
-    color: #A2381C; }
+    color: #fff; }
 
 .logo {
-  font-family: "Lora";
+  font-family: "Oxygen";
   color: #fff;
   text-shadow: 0 0 10px #000;
   font-size: 5em;
   position: relative;
   text-align: center;
-  margin-top: 200px; }
+  margin-top: 135px; }
   .logo a:link {
     text-decoration: none;
     color: #fff; }
@@ -449,8 +453,8 @@ body {
     color: #fff; }
 
 #not {
-  color: #A2381C;
-  text-shadow: 0 0 10px #5e5d5d; }
+  color: #A70015;
+  text-shadow: 0 0 2px #5e5d5d; }
 
 .arrow {
   position: relative;
@@ -460,7 +464,7 @@ body {
 .thumbnail-container {
   width: 100%;
   height: 550px;
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
   align-items: center; }
   .thumbnail-container a:link {
@@ -472,8 +476,12 @@ body {
   .thumbnail-container a:visited {
     text-decoration: none;
     color: black; }
+  .thumbnail-container a:hover {
+    color: #464646; }
 
 .thumbnail {
+  position: relative;
+  border-radius: 6px;
   height: 440px;
   width: 360px;
   margin: 98px;
@@ -482,13 +490,34 @@ body {
   color: #fff;
   font-family: "Oxygen";
   font-size: 2em; }
-  .thumbnail a:link {
-    text-decoration: none; }
-  .thumbnail a::before {
-    text-decoration: none; }
-  .thumbnail a:visited {
-    text-decoration: none;
-    border-style: none; }
+
+.thumbnail-container a:link {
+  text-decoration: none; }
+
+.thumbnail-container a::before {
+  text-decoration: none; }
+
+.thumbnail-container a:visited {
+  text-decoration: none;
+  border-style: none; }
+
+.thumbnail-container a:hover {
+  color: #464646; }
+  .thumbnail-container a:hover .thumb-text {
+    padding-bottom: 100px;
+    transition: all 0.25s ease-in-out;
+    background-color: rgba(25, 25, 25, 0.9); }
+
+.thumb-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(50, 50, 50, 0.5);
+  transition: all 0.25s ease-in-out; }
+  .thumb-text p {
+    margin-left: 55px; }
 
 #thumb-1 {
   background-image: url("../images/kitchen.jpeg");
@@ -499,11 +528,11 @@ body {
   background-size: cover; }
 
 #thumb-3 {
-  background-image: url("http://www.feedingamerica.org/assets/images/section-landing-page-boxes/section-or-families-mobile-pantry-expjan2016.jpg");
+  background-image: url("../images/pear.jpeg");
   background-size: cover; }
 
 .supporters-title {
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: -100px;
   text-align: center; }
 
@@ -512,22 +541,21 @@ body {
   width: 100px;
   margin-top: 150px;
   display: inline-flex;
-  margin-left: 475px;
+  margin-left: 420px;
   margin-right: 40px; }
 
 #TIY {
-  margin-right: 120px; }
+  margin-right: 175px; }
 
 #SPACC {
-  margin-right: 120px; }
+  margin-right: 175px; }
 
 .registrationHeader {
   margin-top: -24px;
   width: 100%;
   height: 55px;
   font-size: 2em;
-  border-bottom: 2px solid;
-  background-color: #fff;
+  background-color: #eeeeee;
   margin-top: -25px; }
   .registrationHeader .RegistrationNav {
     margin-right: 20px; }
@@ -542,21 +570,24 @@ body {
     color: black; }
   .registrationHeader a:visited {
     text-decoration: none;
-    color: black; }
+    color: #464646; }
   .registrationHeader a:hover {
-    color: #A2381C; }
+    color: #fff; }
 
 .step-1 {
-  height: 750px;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../images/bananas.jpeg"); }
+  background-image: url("../images/vegetables.jpg"); }
   .step-1 .form-fields-1 {
     height: 400px;
+    border-radius: 1px;
     width: 35%;
-    background-color: #fff;
+    background-color: #eeeeee;
+    border-style: outset;
+    border-radius: 4px;
     margin-top: -20px;
     padding: 20px;
     margin-top: 100px;
@@ -564,16 +595,13 @@ body {
     .step-1 .form-fields-1 li {
       list-style: none;
       font-size: 1.5em; }
-      .step-1 .form-fields-1 li h3 {
-        text-decoration: underline;
-        font-family: "Oxygen";
-        text-align: center;
-        display: flex; }
+    .step-1 .form-fields-1 h3 {
+      text-decoration: underline; }
     .step-1 .form-fields-1 input {
       margin: 10px; }
 
 #email {
-  margin-left: 53px; }
+  margin-left: 54px; }
 
 #password {
   margin-left: 25px; }
@@ -582,51 +610,57 @@ body {
   background-color: #fff;
   margin-top: 20px;
   margin-left: 225px; }
+  #setUpButton:hover {
+    color: #000; }
+
+.role-header {
+  margin-left: -10px; }
 
 .step-2 {
-  height: 750px;
+  height: 100vh;
   width: 100%;
+  border-radius: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../images/carrots.jpeg");
+  background-image: url("../images/pasta.jpeg");
   background-size: cover; }
   .step-2 .form-fields-2 {
     margin-top: 100px;
     padding: 20px;
+    width: 35%;
     align-content: center;
-    background-color: #fff;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    border-style: outset;
     height: auto; }
     .step-2 .form-fields-2 li {
       list-style: none;
       font-size: 1.5em; }
-      .step-2 .form-fields-2 li h3 {
-        text-decoration: underline;
-        font-family: "Oxygen";
-        text-align: center;
-        display: flex; }
+    .step-2 .form-fields-2 h3 {
+      text-decoration: underline; }
 
 #radio {
-  margin: 20px; }
+  margin-left: 50px; }
 
 #surveyButton-1 {
   margin-top: 20px;
   margin-left: 190px;
-  width: 75px;
+  width: 100px;
   background-color: #fff; }
+  #surveyButton-1:hover {
+    color: #494C4B; }
 
 #surveyButton-2 {
   width: 200px;
   margin-left: 40px;
   background-color: #fff; }
+  #surveyButton-2:hover {
+    color: #494C4B; }
 
 .drop-form {
   margin-left: -50px;
   margin-top: -20px; }
-  .drop-form h2 {
-    font-size: 2.5em;
-    margin-left: auto;
-    margin-top: -30px; }
   .drop-form label {
     margin-left: auto; }
 
@@ -641,7 +675,6 @@ body {
     margin-top: 10px; }
 
 #avail-title {
-  margin-bottom: -25px;
   margin-left: -38px; }
 
 .availability {
@@ -654,7 +687,8 @@ body {
   margin-left: 138px; }
 
 #vol-phone {
-  margin-left: 88px; }
+  margin-left: 88px;
+  margin-bottom: 40px; }
 
 #from {
   margin-top: 13px;
@@ -666,22 +700,27 @@ body {
   margin-left: 10px; }
 
 #donor-name {
-  margin-left: 10px; }
+  margin-left: 10px;
+  width: 252px; }
+
+#shelter-name {
+  margin-left: 10px;
+  width: 365px; }
 
 #donor-address {
-  width: 487px;
+  width: 488px;
   margin-left: 10px; }
 
 #donor-contact {
-  width: 420px;
+  width: 421px;
   margin-left: 10px; }
 
 #donor-phone {
-  width: 418px;
+  width: 417px;
   margin-left: 10px; }
 
 .step-3 {
-  height: 750px;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -692,56 +731,127 @@ body {
     width: 500px;
     margin-top: 100px;
     padding: 20px;
-    align-content: center;
-    background-color: #fff;
+    width: 35%;
+    background-color: #eeeeee;
+    border-style: outset;
+    border-radius: 4px;
     height: auto; }
     .step-3 .form-fields-3 li {
       list-style: none;
       font-size: 1.5em; }
     .step-3 .form-fields-3 h3 {
-      text-decoration: underline;
-      font-family: "Oxygen";
-      text-align: center;
-      display: flex; }
+      text-decoration: underline; }
 
-#surveyButton-1-conf {
-  margin-top: 20px;
-  width: 75px;
+#confirmButtons {
+  display: inline-flex; }
+
+#confirmButton-1 {
+  width: 100px;
+  margin-left: 70px;
+  margin-right: 40px;
   background-color: #fff; }
+  #confirmButton-1:hover {
+    color: #494C4B; }
 
-#surveyButton-2-conf {
-  margin-bottom: 40px;
+#confirmButton-2 {
   width: 250px;
   background-color: #fff; }
+  #confirmButton-2:hover {
+    color: #494C4B; }
 
 .aboutContainer {
   background-image: url("../images/oranges.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -30px;
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  text-shadow: 0 0 10px #000; }
+  height: 100vh;
+  width: 100%; }
 
 .aboutContent {
   height: 900px;
   width: 70%;
-  margin-left: 200px; }
+  margin-left: 200px;
+  color: #eeeeee;
+  text-shadow: 0 0 10px #000;
+  line-height: 2em; }
+  .aboutContent p {
+    font-size: 1.3em; }
+  .aboutContent a:link {
+    color: #eeeeee;
+    text-decoration: none; }
+  .aboutContent a:visited {
+    color: #eeeeee; }
+  .aboutContent a:hover {
+    color: #e13f22; }
+  .aboutContent h2 {
+    font-family: "Oxygen"; }
 
 .profile-container {
-  margin: 0;
-  background-color: #464646; }
+  margin-top: -35px; }
+
+#profile-header {
+  width: 100%;
+  height: 75px;
+  font-size: 2em;
+  border-bottom: 1px solid; }
+  #profile-header .nav {
+    margin-right: 20px; }
+  #profile-header li {
+    display: inline-block;
+    float: right;
+    padding: 15px;
+    list-style: none;
+    font-family: "Oxygen"; }
+  #profile-header a:link {
+    text-decoration: none;
+    color: #464646; }
+  #profile-header a:visited {
+    text-decoration: none;
+    color: #464646; }
+  #profile-header a:hover {
+    color: #fff; }
 
 .profile-body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Tampa_florida_map.jpg");
+  background-size: cover;
   display: in-block;
   float: right;
   text-align: center;
   height: 750px;
   width: 75%;
-  border-left: 2px solid; }
+  border-left: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   .profile-body li {
     list-style: none; }
+
+.profile-form {
+  margin-top: 100px;
+  height: 500px;
+  background-color: #eeeeee;
+  border-style: outset;
+  width: 600px;
+  font-size: 1.3em;
+  text-transform: center;
+  display: flex;
+  flex-direction: column; }
+  .profile-form label {
+    font-size: 1.3em;
+    margin-left: -38px; }
+
+#donation-location {
+  width: 550px;
+  height: 40px;
+  margin-left: -38px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+#donation-instructions {
+  width: 550px;
+  height: 100px;
+  margin-left: -38px;
+  margin-top: 15px; }
 
 .account-info {
   margin-left: 40px; }
@@ -750,10 +860,44 @@ body {
   display: block;
   float: left;
   height: 750px;
-  background-color: #fff;
-  width: 22%; }
+  background-color: #eeeeee;
+  width: 24.9%;
+  margin-right: -50px;
+  font-size: 1.5em; }
   .profile-sidebar li {
-    list-style: none; }
+    list-style: none;
+    margin-right: 40px; }
+  .profile-sidebar h3 {
+    text-decoration: underline;
+    margin-top: 100px; }
+
+#go-button {
+  margin-left: 20px;
+  width: 100px;
+  height: 45px;
+  font-size: 1.3em; }
 
 .contact-container {
-  background-color: #464646; }
+  background-image: url("../images/vegetables.jpg");
+  background-size: cover;
+  color: #464646;
+  height: 100vh;
+  text-align: center; }
+  .contact-container .contact-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contact-container .contact-div .contact {
+      display: flex;
+      flex-direction: column;
+      height: 500px;
+      width: 400px;
+      background-color: #eeeeee; }
+      .contact-container .contact-div .contact li {
+        list-style: none;
+        padding: 20px; }
+        .contact-container .contact-div .contact li label {
+          font-size: 1.3em;
+          margin-right: 15px; }
+        .contact-container .contact-div .contact li input {
+          padding: 15px; }
