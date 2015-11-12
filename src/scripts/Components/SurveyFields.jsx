@@ -51,9 +51,9 @@ export default class SurveyFields extends React.Component {
                 <ul className="availability">
                   <li><label id="avail-title">Availability</label></li>
                   <li><p id="from" >From:</p></li>
-                  <li><input type="time" ref="from" defaultValue={this.props.fieldValues.from} /></li>
+                  <li><input className="avail-input" type="time" ref="from" defaultValue={this.props.fieldValues.from} /></li>
                   <li><p id="to" >To:</p></li>
-                  <li><input type="time" ref="to" defaultValue={this.props.fieldValues.to} /></li>
+                  <li><input className="avail-input" type="time" ref="to" defaultValue={this.props.fieldValues.to} /></li>
                 </ul>
               </ul>
             </form>
@@ -132,7 +132,7 @@ export default class SurveyFields extends React.Component {
             <li id="radio">
               {['Donor', 'Volunteer', 'Shelter'].map(this.renderOptions.bind(this, 'radio', 'role'))}
             </li>
-            <div>
+            <div className="drop-form-div">
               {this.userDetails()}
             </div>
             <li className="form-footer">

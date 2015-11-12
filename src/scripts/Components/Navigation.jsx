@@ -49,7 +49,7 @@ export default class Navigation extends React.Component {
 
     if (currentUser()) {
       navItems.push(
-        <li key="logout"><a onClick={this.handleSignOut}>Logout</a></li>,
+        <li key="logout"><a id="logout" onClick={this.handleSignOut}>Logout</a></li>,
         <li key="profile"><a href="#profile">Profile</a></li>
       );
     } else {

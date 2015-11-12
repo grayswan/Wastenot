@@ -36,11 +36,11 @@ export default class Setup extends React.Component {
             </li>
             <li>
               <label>Create Password</label>
-              <input id="password" type="password" ref="password" defaultValue={this.props.fieldValues.password} />
+              <input className="password" type="password" ref="password" defaultValue={this.props.fieldValues.password} />
             </li>
             <li>
               <label>Confirm Password</label>
-              <input type="password" ref="password_confirmation" defaultValue={this.props.fieldValues.password_confirmation} />
+              <input className="password" type="password" ref="password_confirmation" defaultValue={this.props.fieldValues.password_confirmation} />
             </li>
             <li>
               <button id="setUpButton" onClick={this.handleSetup}>Save and Continue</button>
@@ -52,7 +52,6 @@ export default class Setup extends React.Component {
   }
 
   nextStep (e) {
-    // e.preventDefault()
 
     let data = {
       email        : this.refs.email.value,

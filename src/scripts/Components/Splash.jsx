@@ -10,14 +10,16 @@ class Splash extends React.Component {
     render() {
       return (
         <div className="splash">
-          <div className="header">
-            <Navigation />
-          </div>
-          <div className="logo">
-            <h1>#waste<span id="not">not</span></h1>
-          </div>
-          <div className="arrow">
-            <a href="#thumbnail"><img src="/images/menu_down_arrow.png" alt="down arrow" height="100px" /></a>
+          <div className="splash-image">
+            <div className="header">
+              <Navigation />
+            </div>
+            <div className="logo">
+              <h1>#waste<span id="not">not</span></h1>
+            </div>
+            <div id="arrow">
+              <a href="#thumbnail"><img src="/images/menu_down_arrow.png" alt="down arrow" height="100px" /></a>
+            </div>
           </div>
           <div id="thumbnail" className="thumbnail-container">
             <a href="#registration">

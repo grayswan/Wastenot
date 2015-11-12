@@ -23,7 +23,7 @@ export default class Contact extends React.Component {
             </li>
             <li>
               <label>Comment</label>
-              <input type="text"/>
+              <input id="comment" type="text"/>
             </li>
           </ul>
         </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
 import Splash from './Splash';
-import AccountFields from './AccountFields';
 import Confirmation from './Confirmation';
 import Registration from './Registration';
 import Success from './Success';

@@ -26,7 +26,7 @@ Environmental Protection Agency<br />
 "48.1 million Americans lived in food insecure households, including 32.8 million adults and 15.3 million children. 14 percent of households (17.4 million households) were food insecure, and 6 percent (6.9 million households) experienced very low food security."
 <a href="http://1.usa.gov/1Ni4qeq">USDA Economic Research Service</a><br />
 
-… and those statistics don't even include the homeless.</p><br />
+… and those statistics don't even include the homeless.</p>
 
 <p>Our mission is to put a dent not only in hunger but in food waste and landfill pollution. By connecting businesses with those providing food for the needy we believe we can tackle environmental, social, and economic concerns, all at once. Add to that a crowd-sourced method of delivery and the winning never stops.
 
