@@ -3,7 +3,6 @@
 
 
 body
-  margin: 0
   font-family: "Oxygen"
   color: #464646
 
@@ -61,10 +60,12 @@ body
   align-self: flex-end
   margin-top: 10px
   border-radius: 4px
+  outline: none
 
 .button
   border-radius: 6px
   background-color: #fff
+  outline: none
   &:hover
     background-color: #5F914E
 
@@ -96,11 +97,15 @@ body
     color: #5F914E
 
 .splash-image
+    position: relative
     background-image: url("../images/greenbeans.jpeg")
     background-repeat: no-repeat
     background-size: cover
     width: 100%
     height: 100vh
+    @media screen and (max-width: 320px)
+      .splash-image
+        height: 400px
     .logo
       font-family: "Oxygen"
       color: #fff
@@ -109,15 +114,21 @@ body
       position: relative
       text-align: center
       margin-top: 135px
+      @media screen and (max-width: 900px)
+        font-size: 3em
+      @media screen and (max-width: 320px)
+        font-size: 2em
     #not
       color: #A70015
       // text-shadow: 0 0 10px #000
       text-shadow: 0 0 2px #5e5d5d
+
+
 #arrow
-  display: flex
-  align-items: baseline
-  justify-content: center
-  margin-top: 250px
+  position: absolute
+  bottom: 20px
+  left: 50%
+  margin-left: -50px
 
 //// Footer ////
 
@@ -131,73 +142,79 @@ body
 //// Thumbnails ////
 
 .thumbnail-container
-  width: 100%
-  height: 100vh
   display: flex
-  align-items: center
-  justify-content: center
+  flex-direction: row
   background-image: url("../images/burlap.jpg")
+
   a:link
     text-decoration: none
-    color: black
-  a::before
-    text-decoration: none
-    color: black
+    color: white
   a:visited
     text-decoration: none
-    color: black
-  a:hover
-    color: #464646
+    color: white
 
-.thumbnail
-  position: relative
-  border-radius: 8px
-  height: 500px
-  width: 425px
-  margin: 60px
-  color: #fff
-  font-family: "Oxygen"
-  font-size: 2em
+  .thumbnail
+    flex: 1
+    position: relative
+    border-radius: 8px
+    height: 500px
+    margin: 60px
+    color: #fff
+    font-family: "Oxygen"
+    background-size: cover
 
-.thumbnail-container
-  a:link
-    text-decoration: none
-  a::before
-    text-decoration: none
-  a:visited
-    text-decoration: none
-    border-style: none
-  a:hover
-    color: #464646
+    &:first-child
+      margin-right: 0
+
+    &:last-child
+      margin-left: 0
 
     .thumb-text
       padding-bottom: 100px
       transition: all 0.25s ease-in-out
       background-color: rgba(25, 25, 25, 0.9)
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      padding: 20px
 
-.thumb-text
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  padding: 20px
-  background-color: rgba(50, 50, 50, 0.5)
-  transition: all 0.25s ease-in-out
+      &:hover
+        background-color: rgba(50, 50, 50, 0.5)
+        transition: all 0.25s ease-in-out
+        padding-bottom: 100px
 
-  p
-    text-align: center
+
+@media screen and (max-width: 900px)
+  .thumbnail-container
+
+    flex-direction: column
+
+    .thumbnail
+      height: 300px
+
+      &:first-child
+        margin-right: 60px
+        margin-bottom: 0
+
+      &:last-child
+        margin-left: 60px
+        margin-top: 0
+
+//   h1
+//     text-align: center
+//   p
+//     text-align: center
 
 #thumb-1
   background-image: url("../images/kitchen.jpeg")
-  background-size: cover
 
 #thumb-2
   background-image: url("../images/corn.jpeg")
-  background-size: cover
 
 #thumb-3
   background-image: url("../images/pear.jpeg")
-  background-size: cover
+
 
 //// Supporters ////
 
@@ -205,23 +222,23 @@ body
   height: 100px
   margin: 0
   text-align: center
-  display: flex
-  align-items: center
-  justify-content: center
   font-size: 1.3em
 
 .supporters
-  height: 200px
-  width: 107%
+  margin-bottom: 20px
   display: flex
   align-items: center
   justify-content: center
 
-#TIY
-  margin-right: 175px
+  > a
+    text-align: center
+    display: block
+    padding: 10px
+    flex: 1
 
-#SPACC
-  margin-right: 175px
+@media screen and (max-width: 900px)
+  .supporters
+    flex-direction: column
 
 //// Registration Navigation ///
 
@@ -280,16 +297,26 @@ body
     border-radius: 6px
     margin-top: 10px
     margin-bottom: 10px
+    outline: none
 
 #setUpButton
   background-color: #fff
   margin-top: 20px
   align-items: center
   border-radius: 6px
+  outline: none
   &:hover
     background-color: #5F914E
 
 //// Survey Fields ////
+
+.radio-button
+  padding-right: 20px
+  padding-left: 10px
+  outline: none
+
+#radio
+  outline: none
 
 .role-header
   margin-left: -10px
@@ -326,6 +353,7 @@ body
     border-radius: 6px
     margin-top: 10px
     margin-bottom: 10px
+    outline: none
 
 #surveyButton-1
   margin-top: 20px
@@ -333,6 +361,7 @@ body
   width: 100px
   background-color: #fff
   border-radius: 6px
+  outline: none
   &:hover
     background-color: #5F914E
 
@@ -341,18 +370,27 @@ body
   // margin-left: 40px
   background-color: #fff
   border-radius: 6px
+  outline: none
   &:hover
     background-color: #5F914E
 
 .availability
-  margin-left: -30px
-  display: flex
+  display: inline-flex
   flex-direction: row
+  padding: 10px
 
-.avail-input
-  width: 40px
-  margin: 20px
+#from
+  margin-right: 10px
 
+#from-input
+  width: 140px
+
+#to
+  padding-left: 10px
+  padding-right: 10px
+
+#to-input
+  width: 140px
 
 //// Confirmation ////
 
@@ -385,6 +423,7 @@ body
   margin-right: 20px
   background-color: #fff
   border-radius: 6px
+  outline: none
   &:hover
     background-color: #5F914E
 
@@ -392,6 +431,7 @@ body
   width: 250px
   background-color: #fff
   border-radius: 6px
+  outline: none
   &:hover
     background-color: #5F914E
 
@@ -490,6 +530,7 @@ body
   margin-top: 15px
   margin-bottom: 15px
   border-radius: 6px
+  outline: none
 
 #donation-instructions
   width: 550px
@@ -497,6 +538,7 @@ body
   margin-left: -38px
   margin-top: 15px
   border-radius: 6px
+  outline: none
 
 .account-info
   margin-left: 40px
@@ -522,6 +564,7 @@ body
   font-size: 1.3em
   border-radius: 6px
   background-color: #fff
+  outline: none
   &:hover
     background-color: #5F914E
 

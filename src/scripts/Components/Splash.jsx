@@ -22,21 +22,32 @@ class Splash extends React.Component {
             </div>
           </div>
           <div id="thumbnail" className="thumbnail-container">
-            <a href="#registration">
-              <div id="thumb-1" className="thumbnail">
-                <div className="thumb-text"><p>Get Involved</p></div>
-              </div>
-            </a>
-            <a href="#about">
-              <div id="thumb-2" className="thumbnail">
-                <div className="thumb-text"><p>Our Mission</p></div>
-              </div>
-            </a>
-            <a href="http://www.feedingamerica.org/">
-              <div id="thumb-3" className="thumbnail">
-                <div className="thumb-text"><p>Learn More</p></div>
-              </div>
-            </a>
+            <div id="thumb-1" className="thumbnail">
+              <a href="#registration">
+                <div className="thumb-text">
+                  <h1>Get Involved</h1>
+                  <p>Join us in fighting hunger and food waste. Whether you are a business or a volunteer willing to help. We need you!</p>
+                </div>
+              </a>
+            </div>
+            <div id="thumb-2" className="thumbnail">
+              <a href="#about">
+                <div className="thumb-text">
+                  <h1>Our Mission</h1>
+                  <p>Our mission is to put a dent not only in hunger but in food waste and landfill pollution by connecting businesses with thos providing food for the needy.</p>
+                </div>
+              </a>
+            </div>
+
+            <div id="thumb-3" className="thumbnail">
+              <a href="http://www.feedingamerica.org/">
+                <div className="thumb-text">
+                  <h1>Learn More</h1>
+                  <p>Hunger and food insecurity affects all people in the U.S. of all ages.
+                    The productivity of our country would greatly improve if we addressed this root issue.</p>
+                </div>
+              </a>
+            </div>
           </div>
           <div className="supporters-title"><h1>Our Supporters</h1></div>
           <div className="supporters">

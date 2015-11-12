@@ -27,7 +27,8 @@ export default class SurveyFields extends React.Component {
 
     return (
       <label key={index}>
-        <input onClick={this.handleChange} type={type} name={name} value={value} defaultChecked={isChecked()} /> {value}
+        <input id="radio" onClick={this.handleChange} type={type} name={name} value={value} defaultChecked={isChecked()} />
+        <span className="radio-button" >{value}</span>
       </label>
     )
   }
@@ -48,12 +49,12 @@ export default class SurveyFields extends React.Component {
                   <label>Cell Phone</label>
                   <input id="vol-phone" type="tel" ref="phone" defaultValue={this.props.fieldValues.cell_phone} />
                 </li>
+                <li><label id="avail-title">Availability</label></li>
                 <ul className="availability">
-                  <li><label id="avail-title">Availability</label></li>
                   <li><p id="from" >From:</p></li>
-                  <li><input className="avail-input" type="time" ref="from" defaultValue={this.props.fieldValues.from} /></li>
+                  <li><input id="from-input" type="time" ref="from" defaultValue={this.props.fieldValues.from} /></li>
                   <li><p id="to" >To:</p></li>
-                  <li><input className="avail-input" type="time" ref="to" defaultValue={this.props.fieldValues.to} /></li>
+                  <li><input id="to-input" type="time" ref="to" defaultValue={this.props.fieldValues.to} /></li>
                 </ul>
               </ul>
             </form>
@@ -129,7 +130,7 @@ export default class SurveyFields extends React.Component {
         <div className="step-2">
           <ul className= "form-fields-2">
             <li><h3>PLEASE SELECT YOUR ROLE</h3></li>
-            <li id="radio">
+            <li>
               {['Donor', 'Volunteer', 'Shelter'].map(this.renderOptions.bind(this, 'radio', 'role'))}
             </li>
             <div className="drop-form-div">
