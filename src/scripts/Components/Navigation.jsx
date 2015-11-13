@@ -49,7 +49,7 @@ export default class Navigation extends React.Component {
 
     if (currentUser()) {
       navItems.push(
-        <li key="logout"><a id="logout" onClick={this.handleSignOut}>Logout</a></li>,
+        <li id="logout" key="logout"><a href="#" onClick={this.handleSignOut}>Logout</a></li>,
         <li key="profile"><a href="#profile">Profile</a></li>
       );
     } else {
@@ -67,7 +67,7 @@ export default class Navigation extends React.Component {
                   <input className="checkbox" type="checkbox" />
                 </p>
                 <p className="submit">
-                  <button className="button" onClick={this.handleSignIn} >Login </button>
+                  <button className="button" type="button" onClick={this.handleSignIn} >Login </button>
                 </p>
               </form>
             </li>

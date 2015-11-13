@@ -34,7 +34,7 @@ class Splash extends React.Component {
               <a href="#about">
                 <div className="thumb-text">
                   <h1>Our Mission</h1>
-                  <p>Our mission is to put a dent not only in hunger but in food waste and landfill pollution by connecting businesses with thos providing food for the needy.</p>
+                  <p>Our mission is to put a dent in hunger, food waste, and landfill pollution by connecting businesses with those providing food for the needy.</p>
                 </div>
               </a>
             </div>
@@ -43,7 +43,7 @@ class Splash extends React.Component {
               <a href="http://www.feedingamerica.org/">
                 <div className="thumb-text">
                   <h1>Learn More</h1>
-                  <p>Hunger and food insecurity affects all people in the U.S. of all ages.
+                  <p>Hunger and food insecurity affects people in the U.S. of all ages.
                     The productivity of our country would greatly improve if we addressed this root issue.</p>
                 </div>
               </a>

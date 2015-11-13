@@ -18,7 +18,7 @@ export default class Setup extends React.Component {
 
       })
     }).then(() => {
-      this.nextStep(event);
+      this.nextStep();
     }).catch(function(ex) {
       console.log('failed', ex);
     });
@@ -43,7 +43,7 @@ export default class Setup extends React.Component {
               <input className="password" type="password" ref="password_confirmation" defaultValue={this.props.fieldValues.password_confirmation} />
             </li>
             <li>
-              <button id="setUpButton" onClick={this.handleSetup}>Save and Continue</button>
+              <button id="setUpButton" type="button" onClick={this.handleSetup}>Save and Continue</button>
             </li>
           </ul>
         </form>
@@ -51,7 +51,7 @@ export default class Setup extends React.Component {
     )
   }
 
-  nextStep (e) {
+  nextStep() {
 
     let data = {
       email        : this.refs.email.value,

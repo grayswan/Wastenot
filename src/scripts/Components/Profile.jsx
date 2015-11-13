@@ -21,6 +21,10 @@ export default class Profile extends React.Component {
     }
   }
 
+  var thankYou;
+    if
+
+
   componentWillMount() {
     this.currentUser = currentUser();
 
@@ -47,17 +51,6 @@ export default class Profile extends React.Component {
   }
 
   render () {
-    // let thanks = [
-    // <h3>Thanks for your donation! A volunteer will come to pick it up shortly.</h3>
-    // ];
-    //
-    // if (donation button has been clicked) {
-    //   say thanks(
-    //
-    //   );
-    // } else {
-    //   don't say thanks
-
 
     return (
       <div className="profile-container">
