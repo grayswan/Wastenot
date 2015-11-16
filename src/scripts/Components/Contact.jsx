@@ -13,18 +13,8 @@ export default class Contact extends React.Component {
         <div className="contact-div">
           <ul className="contact">
             <li><h1>CONTACT US</h1></li>
-            <li>
-              <label>Name</label>
-              <input type="text"/>
-            </li>
-            <li>
-              <label>Email</label>
-              <input type="email"/>
-            </li>
-            <li>
-              <label>Comment</label>
-              <input id="comment" type="text"/>
-            </li>
+            <li><p>Our site is currently under construction</p></li>
+            <li><p>If you are interested in finding out more about #wastenot, please contact Michael Reed at: myk27x@gmail.com</p></li>
           </ul>
         </div>
       </div>

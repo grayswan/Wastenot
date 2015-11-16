@@ -13,6 +13,7 @@ class Splash extends React.Component {
           <div className="splash-image">
             <div className="header">
               <Navigation />
+              <a href="#contact"><p className="under-construction">Our site is currently under construction. Please check back soon!</p></a>
             </div>
             <div className="logo">
               <h1>#waste<span id="not">not</span></h1>

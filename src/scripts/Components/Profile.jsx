@@ -21,10 +21,6 @@ export default class Profile extends React.Component {
     }
   }
 
-  var thankYou;
-    if
-
-
   componentWillMount() {
     this.currentUser = currentUser();
 
