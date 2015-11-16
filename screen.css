@@ -361,6 +361,12 @@ body {
 .splash {
   margin-top: -40px; }
 
+.under-construction {
+  color: white;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px; }
+
 .header {
   width: 100%;
   height: 120px;
@@ -495,7 +501,7 @@ body {
     flex: 1;
     position: relative;
     border-radius: 8px;
-    height: 500px;
+    height: 600px;
     margin: 60px;
     color: #fff;
     font-family: "Oxygen";
@@ -527,7 +533,7 @@ body {
   .thumbnail-container {
     flex-direction: column; }
     .thumbnail-container .thumbnail {
-      height: 300px; }
+      height: 500px; }
       .thumbnail-container .thumbnail:first-child {
         margin-right: 60px;
         margin-bottom: 0; }
@@ -755,13 +761,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -40px;
-  height: 100vh;
+  height: 1400px;
   width: 100%; }
 
 .aboutContent {
-  height: 100%;
-  width: 70%;
-  margin-left: 200px;
+  height: 1400px;
+  width: 80%;
+  margin-left: 150px;
   color: #eeeeee;
   text-shadow: 0 0 10px #000;
   line-height: 2.1em; }
@@ -900,14 +906,13 @@ body {
     border-radius: 6px; }
     .contact-div .contact li {
       list-style: none; }
-      .contact-div .contact li label {
-        font-size: 1.8em; }
-      .contact-div .contact li input {
+      .contact-div .contact li h1 {
+        text-align: center;
+        margin-left: -40px; }
+      .contact-div .contact li p {
+        text-align: center;
         margin-left: -40px;
-        margin-bottom: 10px;
-        font-size: 1.8em;
-        border-radius: 6px;
-        width: 100%; }
+        font-size: 2em; }
 
 #comment {
   height: 100px auto; }
