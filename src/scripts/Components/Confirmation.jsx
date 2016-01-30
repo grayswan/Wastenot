@@ -14,8 +14,8 @@ var Confirmation = React.createClass({
             <li><b>Phone:</b> {this.props.fieldValues.phone}</li>
             <li><b>Email:</b> {this.props.fieldValues.email}</li>
             <ul id="confirmButtons">
-              <li><button id="confirmButton-1" onClick={this.props.previousStep}>Back</button></li>
-              <li><button id="confirmButton-2" onClick={this.props.submitRegistration}> Submit Registration</button></li>
+              <li><button id="confirmButton-1" type="button" onClick={this.props.previousStep}>Back</button></li>
+              <li><button id="confirmButton-2" type="button" onClick={this.props.submitRegistration}> Submit Registration</button></li>
             </ul>
           </ul>
         </form>

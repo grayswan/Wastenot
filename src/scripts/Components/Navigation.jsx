@@ -43,18 +43,18 @@ export default class Navigation extends React.Component {
 
   render () {
     let navItems = [
-      <li key="contact"><a href="#contact">Contact</a></li>,
-      <li key="about"><a href="#about">About</a></li>,
+      <li key="contact" className="nav-effect"><a href="#contact">CONTACT</a></li>,
+      <li key="about" className="nav-effect"><a href="#about">ABOUT</a></li>,
     ];
 
     if (currentUser()) {
       navItems.push(
-        <li id="logout" key="logout"><a href="#" onClick={this.handleSignOut}>Logout</a></li>,
-        <li key="profile"><a href="#profile">Profile</a></li>
+        <li id="logout" key="logout" className="nav-effect"><a href="#" onClick={this.handleSignOut}>LOGOUT</a></li>,
+        <li key="profile" className="nav-effect"><a href="#profile">PROFILE</a></li>
       );
     } else {
       navItems.push(
-        <li key="login" className="dropdown"><a href="#">Login</a>
+        <li key="login" className="dropdown nav-effect"><a href="#">LOGIN</a>
           <ul className="drop-nav">
             <li>
               <form>
@@ -71,13 +71,13 @@ export default class Navigation extends React.Component {
                 </p>
               </form>
             </li>
-            <div id="newAccount" ><a href="#registration">Create New Account</a></div>
+            <div key="newAccount" id="newAccount"><a href="#registration">Create New Account</a></div>
           </ul>
         </li>
       );
     }
 
-    navItems.push(<li key="home"><a href="#">Home</a></li>);
+    navItems.push(<li key="home" className="nav-effect"><a href="#">HOME</a></li>);
 
     return (
       <ul className="nav">

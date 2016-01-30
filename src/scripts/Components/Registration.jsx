@@ -94,12 +94,8 @@ export default class Registration extends React.Component {
     render () {
       return(
         <main>
-          <div className="registrationHeader">
-            <ul className="registrationNav">
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#">Home</a></li>
-            </ul>
+          <div className="header">
+            <Navigation />
           </div>
           <div>
             {this.showStep()}
