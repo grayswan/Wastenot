@@ -43,7 +43,7 @@ export default class Navigation extends React.Component {
 
   render () {
     let navItems = [
-      <li key="contact" className="nav-effect"><a href="#contact">CONTACT</a></li>,
+      <li key="contact" className="nav-effect"><a href="#">HOME</a></li>,
       <li key="about" className="nav-effect"><a href="#about">ABOUT</a></li>,
     ];
 
@@ -67,7 +67,7 @@ export default class Navigation extends React.Component {
                   <input className="checkbox" type="checkbox" />
                 </p>
                 <p className="submit">
-                  <button className="button" type="button" onClick={this.handleSignIn} >Login </button>
+                    <button className="button" type="button" onClick={this.handleSignIn} >Login </button>
                 </p>
               </form>
             </li>
@@ -77,7 +77,7 @@ export default class Navigation extends React.Component {
       );
     }
 
-    navItems.push(<li key="home" className="nav-effect"><a href="#">HOME</a></li>);
+    navItems.push(<li key="home" className="nav-effect"><a href="#contact">CONTACT</a></li>);
 
     return (
       <ul className="nav">

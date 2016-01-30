@@ -2,6 +2,12 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway)
 @import url(https://fonts.googleapis.com/css?family=Lobster|Lobster+Two:400,400italic,700italic,700|Kaushan+Script|Amaranth:400,400italic,700italic,700|Rambla:400,400italic,700,700italic);
 
+*
+*:after
+*::before
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
 body
   font-family: "Raleway", sans-serif
@@ -18,14 +24,16 @@ body
   width: 100%
   height: 80px
   background-color: #fff
+  display: flex
+  align-content: center
+  justify-content: flex-end
   li
-    display: inline-block
-    float: right
+    display: inline-flex
     list-style: none
     font-family: "Raleway"
     a
       position: relative
-      margin: 15px 25px
+      margin: 0px 25px
       outline: none
       color: #162936
       opacity: .80
@@ -40,13 +48,6 @@ body
     a:visited
       text-decoration: none
       color: #162936
-
-  *
-  *:after
-  *::before
-      -webkit-box-sizing: border-box
-      -moz-box-sizing: border-box
-      box-sizing: border-box
 
 .nav-effect a:hover
 .nav-effect a:focus
@@ -80,15 +81,15 @@ body
   -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s
   transition: top 0.3s, opacity 0.3s, transform 0.3s
 
-.nav-effect a:hover::before
-.nav-effect a:hover::after
-.nav-effect a:focus::before
+.nav-effect a:hover::before,
+.nav-effect a:hover::after,
+.nav-effect a:focus::before,
 .nav-effect a:focus::after
   -webkit-transform: scale(1)
   -moz-transform: scale(1)
   transform: scale(1)
 
-.nav-effect a:hover::after
+.nav-effect a:hover::after,
 .nav-effect a:focus::after
   top: 0%
   opacity: 1
@@ -102,24 +103,26 @@ body
     display: block
 
 .drop-nav
-  font-size: .8em
+  font-size: 1.1em
   background-color: #fff
   position: absolute
-  margin-top: 40px
+  margin-left: -180px
+  margin-top: 55px
   border-radius: 2px
-  width: 200px
-  height: 200px
+  width: 220px
+  height: 320px
   display: none
   z-index: 9000
   box-shadow: 0 0 10px #000
   li
-    // margin-left: -100px
     font-family: "Raleway"
+    padding: 5px
+    margin-top: 10px
+    margin-left: -10px
 
 .login
   background-color: #fff
   display: flex
-  align-self: flex-end
   margin-top: 10px
   border-radius: 4px
   outline: none
@@ -140,15 +143,14 @@ body
     color: #162936
   a:hover
     color: #162936
-    line-height: 2em
 
 .checkbox
   margin-left: 20px
 
 #newAccount
   font-family: "Raleway"
-  margin-left: -30px
-  margin-bottom: 20px
+  margin-left: -40px
+  margin-top: 20px
   font-size: .7em
   a:link
     color: #464646
@@ -158,27 +160,31 @@ body
     color: #5F914E
 
 .splash-image
-  // margin-top: -80px
   background-image: url("../images/plums.jpeg")
   background-position: 50% 50%
   background-repeat: no-repeat
   background-size: cover
   width: 100%
   height: 90vh
+
   @media screen and (max-width: 320px)
     .splash-image
       height: 400px
   h1
-    // font-family: "Kaushan"
     font-family: "Lobster Two"
-    // font-family: "Lobster"
     position: absolute
     font-style: italic
-    opacity: .9
+    opacity: .8
     color: #162936
     font-size: 8em
     margin-left: 1100px
     margin-top: 200px
+
+    @media screen and (max-width: 320px)
+      h1
+        margin-left: 20px
+        font-size: 1em
+        margin-top: 50px
   h4
     position: absolute
     margin-top: 350px
@@ -187,6 +193,12 @@ body
     margin-left: 1200px
     font-size: 2.5em
     color: #162936
+
+    @media screen and (max-width: 320px)
+      h1
+        margin-left: 40px
+        font-size: .5em
+        margin-top: 70px
 
 #arrow
   height: 60px
@@ -224,7 +236,7 @@ body
     flex: 1
     position: relative
     border-radius: 4px
-    height: 600px
+    height: 500px
     margin: 60px
     color: #fff
     font-family: "Raleway"
@@ -345,7 +357,7 @@ body
   display: flex
   flex-direction: column
   align-items: center
-  background-image: url("../images/vegetables.jpg")
+  background-image: url("../images/tomatoes.jpeg")
 
 .step-1
   height: 600px
@@ -514,13 +526,16 @@ body
   width: 100%
 
 .aboutContent
-  width: 80%
-  margin-left: 150px
+  width: 90%
   color: #eeeeee
   text-shadow: 0 0 10px #000
   line-height: 2.1em
+  display: flex
+  flex-direction: column
+  justify-content: center
   p
     font-size: 1.3em
+    padding-left: 100px
   a:link
     color: #eeeeee
     text-decoration: none
@@ -531,11 +546,11 @@ body
   h2
     font-family: "Raleway"
     padding-top: 20px
+    padding-left: 100px
 
 //// Profile ////
 
 .profile-container
-  margin-top: -35px
 
 #profile-header
     width: 100%
@@ -640,9 +655,8 @@ body
 
 .contact-container
   width: 100%
-  // position: absolute
   height: 100vh
-  background-image: url("../images/vegetables.jpg")
+  background-image: url("../images/greenbeans.jpeg")
   background-size: cover
   color: #464646
   text-align: center
@@ -661,29 +675,19 @@ body
     border-radius: 6px
     li
       list-style: none
-      // label
-      //   font-size: 1.8em
-      // input
-      //   margin-left: -40px
-      //   margin-bottom: 10px
-      //   font-size: 1.8em
-      //   border-radius: 6px
-      //   width: 100%
       h1
         text-align: center
-        margin-left: -40px
+        text-decoration: underline
       p
         text-align: center
+        margin-top: 70px
         margin-left: -40px
         font-size: 2em
+.email
+  color: black
+
 
 #comment
   height: 100px auto
 
 // RESPONSIVE ////
-
-// @media (max-width: 470px):
-//
-//   .thumbnail:
-//     margin: 50px
-//     width: 25%

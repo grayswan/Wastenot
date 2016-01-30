@@ -50,7 +50,7 @@ export default class Profile extends React.Component {
 
     return (
       <div className="profile-container">
-        <div id="profile-header">
+        <div className="header">
           <Navigation />
         </div>
         <div className="profile-sidebar">

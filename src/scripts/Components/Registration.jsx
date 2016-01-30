@@ -5,6 +5,7 @@ import Setup from './Setup';
 import SurveyFields from './SurveyFields';
 import Confirmation from './Confirmation';
 import Success from './Success';
+import Navigation from './Navigation';
 
 
 var fieldValues = {
@@ -95,7 +96,7 @@ export default class Registration extends React.Component {
       return(
         <main>
           <div className="header">
-            <Navigation />
+            <Navigation/>
           </div>
           <div>
             {this.showStep()}
