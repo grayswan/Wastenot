@@ -14,8 +14,6 @@ class Splash extends React.Component {
             <Navigation />
           </div>
           <div className="splash-image">
-            <h1>#wastenot</h1>
-            <h4>for a better tomorrow</h4>
             <div id="arrow">
               <a href="#thumbnail"><img src="/images/arrow.png" alt="down arrow" height="100px" /></a>
             </div>
